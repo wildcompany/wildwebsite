@@ -1,0 +1,892 @@
+/* ============ GLOBAL STYLES ============ */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0.8rem 4rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo h2 {
+  color: #c62828;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c62828;
+}
+
+/* Dropdown arrow spacing */
+.nav-links i {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* Icons on right */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-icons a {
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+  color: #c62828;
+}
+
+/* Cart styling */
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #ff6f6f;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 10px;
+  padding: 2px 5px;
+  font-weight: bold;
+}
+
+/* ============ HERO SECTION ============ */
+.hero {
+  background-color: #ffefef;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  color: #c62828;
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ============ FEATURED EVENTS ============ */
+.featured {
+  text-align: left;
+  padding: 80px 200px;
+}
+
+.featured h2 {
+  font-size: 32px;
+  color: #c62828;
+  font-weight: 700;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .featured {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .featured h2 {
+    font-size: 26px;
+  }
+}
+
+/* ================= FEATURED EVENTS CARDS ================= */
+.events-section {
+  display: flex;                     /* Arrange cards side by side */
+  justify-content: center;           /* Center cards horizontally */
+  align-items: flex-start;
+  flex-wrap: wrap;                   /* Wrap cards on smaller screens */
+  gap: 30px;                         /* Space between cards */
+  padding: 40px 200px 80px;          /* Top/Side/Bottom padding */
+}
+
+/* ===== Each Event Card ===== */
+.event-card {
+  background-color: #fff;
+  border: 1px solid rgba(198, 40, 40, 0.15);
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  width: 340px;                      /* Fixed width for consistency */
+  overflow: hidden;                  /* Hides image overflow corners */
+  display: flex;
+  flex-direction: column;            /* Stack content vertically */
+  transition: all 0.3s ease;         /* Smooth hover animation */
+}
+
+/* Hover Effect: slight lift and shadow */
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(198, 40, 40, 0.15);
+}
+
+/* ===== Image Section ===== */
+.event-image {
+  position: relative;                /* So badge can be positioned absolutely */
+}
+
+.event-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;                 /* Keeps aspect ratio, fills container */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* ===== Category Badge (Top Left Tag) ===== */
+.event-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #c62828;
+  color: #fff;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Color variations for different types of events */
+.event-badge.launch {
+  background-color: #ff6f6f;         /* Light red for launch */
+}
+
+.event-badge.community {
+  background-color: #9c27b0;         /* Purple for community */
+}
+
+/* ===== Content Area ===== */
+.event-content {
+  padding: 20px 25px;
+}
+
+.event-content h3 {
+  color: #c62828;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.event-content p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+/* ===== Event Details Section ===== */
+.event-details p {
+  display: flex;
+  align-items: center;
+  gap: 8px;                          /* Space between icon and text */
+  margin: 6px 0;
+  color: #444;
+  font-size: 14px;
+}
+
+.event-details i {
+  color: #c62828;
+  font-size: 15px;
+}
+
+/* ===== Footer Section (Attendees + Register Button) ===== */
+.event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;        /* Subtle divider line */
+}
+
+.event-footer p {
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+}
+
+.event-footer i {
+  color: #c62828;
+  margin-right: 6px;
+}
+
+/* ===== Register Button ===== */
+.register-btn {
+  background-color: #ff6f6f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #c62828;         /* Darker red on hover */
+}
+
+.register-btn i {
+  margin-left: 5px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+  .events-section {
+    padding: 40px 50px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .event-card {
+    width: 90%;                      /* Full width on mobile */
+  }
+}
+
+/* ================= PAST EVENTS SECTION ================= */
+.past-events-section {
+  padding: 80px 200px;
+  background-color: #fff;
+}
+
+/* Section Title */
+.past-events-section h2 {
+  color: #c62828;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Red underline under "Past Events" heading */
+.past-events-section .underline {
+  width: 80px;
+  height: 3px;
+  background-color: #c62828;
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+/* ===== Container holding all past event cards ===== */
+.past-events-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* ===== Each Event Card ===== */
+.past-card {
+  background-color: #fff;
+  border: 1px solid rgba(198, 40, 40, 0.15);
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 340px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Slight hover lift */
+.past-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(198, 40, 40, 0.15);
+}
+
+/* ===== Event Image with Overlay ===== */
+.past-image {
+  position: relative;
+}
+
+.past-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Overlay for "Completed" text */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);  /* dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 1; /* Always visible */
+}
+
+/* ===== Card Content ===== */
+.past-content {
+  padding: 20px 25px;
+}
+
+.past-content h3 {
+  color: #c62828;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.past-content .date {
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.past-content .attendees {
+  color: #003366;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+  .past-events-section {
+    padding: 60px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .past-events-section {
+    padding: 50px 20px;
+  }
+
+  .past-events-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .past-card {
+    width: 90%;
+  }
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  background-color: #fff;
+  padding: 80px 100px;
+  border-top: 1px solid #f0dede;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  color: #b22222;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-column p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Headings */
+.footer-column h4 {
+  color: #b22222;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Links */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #b22222;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #444;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #b22222;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer {
+    padding: 60px 40px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+/* ===================== FOOTER BOTTOM ===================== */
+.footer-bottom {
+  border-top: 1px solid #e5e5e5;
+  padding: 25px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  font-size: 15px;
+  color: #333;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #b22222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 20px 40px;
+  }
+
+  .footer-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+/* ================= POPUP OVERLAY ================= */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 900;
+}
+
+/* ================= POPUP BOX ================= */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -48%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Header */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.popup-header h2 {
+  color: #b22222;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  font-size: 28px;
+  cursor: pointer;
+  color: #777;
+}
+
+.close-btn:hover {
+  color: #b22222;
+}
+
+/* Form */
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-form label {
+  font-weight: 600;
+  color: #444;
+}
+
+.popup-form input,
+.popup-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.popup-form input:focus,
+.popup-form textarea:focus {
+  border-color: #b22222;
+  box-shadow: 0 0 4px rgba(178,34,34,0.3);
+}
+
+/* Button */
+.register-btn {
+  background: #b22222;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.register-btn:hover {
+  background: #8b0000;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .popup {
+    width: 90%;
+  }
+}
+
+/* =================================================================== */
+/* ============== NEW: CONSULTATION / APPOINTMENT SECTION ============ */
+/* =================================================================== */
+
+.consultation-section {
+  background-color: #ffefef;          /* Same soft pink as hero for consistency */
+  padding: 60px 200px 80px;
+}
+
+.consultation-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Left column (text) */
+.consultation-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.consultation-info h2 {
+  color: #c62828;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.consultation-info p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.consultation-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.consultation-info ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.consultation-info ul i {
+  color: #c62828;
+}
+
+.consultation-note {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Right column (form card) */
+.consultation-form-card {
+  flex: 1;
+  min-width: 320px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 25px 25px 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(198, 40, 40, 0.1);
+}
+
+.consultation-form-card h3 {
+  color: #c62828;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Form layout */
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 15px;
+}
+
+.form-row.two-columns .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+  background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #c62828;
+  box-shadow: 0 0 4px rgba(198, 40, 40, 0.25);
+}
+
+.help-text {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* Primary button for this section */
+.primary-btn {
+  background-color: #c62828;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: #8b0000;
+  transform: translateY(-1px);
+}
+
+/* Form success message */
+.form-message {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #2e7d32;
+}
+
+/* Appointment date + time row */
+.appointment-row {
+  align-items: flex-start;
+}
+
+/* Time slots container */
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.time-help-text {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Individual time slot button */
+.time-slot-btn {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #c62828;
+  background-color: #fff;
+  color: #c62828;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-slot-btn:hover {
+  background-color: #ffe5e5;
+}
+
+.time-slot-btn.active {
+  background-color: #c62828;
+  color: #fff;
+}
+
+/* Responsive for consultation section */
+@media (max-width: 992px) {
+  .consultation-section {
+    padding: 50px 50px;
+  }
+
+  .consultation-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .consultation-section {
+    padding: 40px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}

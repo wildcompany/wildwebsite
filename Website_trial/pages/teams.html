@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team | Wild</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script defer src="/Website_trial/script.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body { background: #faf7ff; color: #222; 
+     background-image: url('/Website_trial/images/IMG_3103.jpg');
+  background-size: cover;       /* Make it cover the full page */
+  background-repeat: no-repeat; /* Prevent repetition */
+  background-attachment: fixed; /* MAKES IT STICKY */
+  background-position: center;  /* Center the image */}
+
+    header {
+      background: #fff;
+      padding: 22px 60px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      position: sticky; top: 0; z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 { color: #9b25ff; font-size: 1.8em; font-weight: 600; }
+
+    /*Navbar*/
+    
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6%;
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6a0dad;
+}
+
+/* Buttons */
+.nav-buttons a {
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.signin {
+  color: #6a0dad;
+  border: 1px solid #6a0dad;
+}
+
+.signup {
+  background-color: #8a2be2;
+  color: #fff;
+  border: none;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #6a0dad;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+    .section {
+      padding: 60px 10%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section h2 {
+      font-size: 2.6em;
+      color: #9b25ff;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .section-description {
+      margin: 0 auto 50px;
+      color: #555;
+      text-align: center;
+      font-size: 1.5em;
+      line-height: 1.7;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 45px;
+      justify-items: center;
+    }
+
+    .member-card {
+      background: #fff;
+      padding: 28px;
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: 0.35s ease;
+      border: 2px solid transparent;
+    }
+
+    .member-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+      border-color: #d9b3ff;
+    }
+
+    .member-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 18px;
+      border: 4px solid #e8d5ff;
+    }
+
+    .member-card h3 {
+      font-size: 1.3em;
+      color: #222;
+      margin-bottom: 6px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .member-card h4 {
+      font-size: 1em;
+      color: #9b25ff;
+      margin-bottom: 12px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .member-card p {
+      font-size: 0.96em;
+      color: #555;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .group-title {
+      font-size: 2em;
+      color: #7110d1;
+      margin: 60px 0 25px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    /* Button */
+    .apply-btn {
+      display: inline-block;
+      background: #9b25ff;
+      color: #fff;
+      padding: 18px 35px;
+      border-radius: 50px;
+      font-size: 1.2em;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 40px auto 0;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .apply-btn:hover {
+      background: #7110d1;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 45px 10%;
+      background: #f3ebff;
+      margin-top: 60px;
+      color: #555;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <header >
+  <h1 >Our Team</h1>
+</header>
+<!-- CONSULTATION COMMITTEE -->
+<section class="section">
+  <h2>Consultation Committee</h2>
+  <p class="section-description">
+    Our trusted advisors who provide strategy, direction, and expertise to support Wild’s growth.
+  </p>
+
+  <h3 class="group-title" style="text-align: center;">
+    Skin Care &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+   Natural Tourism &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+    Emotional Intelligence In Leadership (EIL)
+  </h3>
+
+  <div class="team-grid"></div>
+
+  <!-- Sara card -->
+  <div class="team-grid">
+    <div class="member-card" style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;padding:40px;">
+      <div class="sara-image" style="flex:1;min-width:260px;text-align:center;">
+        <img src="/Website_trial/images/Sara's Professional photo .jpg" alt="Sara Photo" style="width:320px;height:320px;object-fit:cover;border-radius:50%;border:6px solid #e8d5ff;">
+      </div>
+
+      <div class="sara-text" style="flex:2;min-width:300px;">
+        <h3 style="font-size:2.2em;color:#222;font-weight:600;margin-bottom:10px;">
+          <a href="https://www.linkedin.com/in/sara-h-644035186/" style="color:#222;text-decoration:none;">Sara Hashemi-Nasab</a>
+        </h3>
+
+        <h4 style="font-size:1.8em;color:#9b25ff;margin-bottom:18px;">Founder & Creative Director</h4>
+
+        <p style="font-size:1.5em;color:#555;">
+          Leads Wild's programs, brand vision, emotional intelligence curriculum development, and organizational strategy.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;">
+    <a href="consultation-form.html" class="apply-btn">Request to Join the Consultation Committee</a>
+  </div>
+</section>
+
+
+
+<!-- INTERNS -->
+<section class="section">
+  <h2>Interns</h2>
+  <p class="section-description">
+    Our interns bring passion, creativity, and dedication to Wild’s mission.
+  </p>
+
+  <!-- SUMMER 2025 -->
+  <h3 class="group-title">Summer 2025</h3>
+
+  <div class="alt-row" style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
+    <div class="alt-image" style="text-align:center;">
+      <img src="/Website_trial/images/Sebastian- summer 2025 intern .JPG" style="width:400px;height:400px;border-radius:50%;object-fit:cover;border:4px solid #e8d5ff;" />
+    </div>
+    <div class="alt-text" style="flex:2;">
+      <h3 style="font-size:2em;color:#222;font-weight:600;">Sebastian Ariza Arcon</h3>
+      <h4 style="font-size:1.7em;color:#9b25ff;margin:10px 0 20px;">Business Management Intern</h4>
+      <p style="font-size:1.6em;color:#555;line-height:1.75;">
+        Conducted research, crafted social media strategies, created content plans,
+        developed pitch decks, researched partnerships, wrote outreach templates,
+        and contributed to Wild’s strategic growth.
+      </p>
+      <p style="font-size:1.6em;"><strong>Supervisor:</strong> Sara Hashemi-Nasab</p>
+    </div>
+  </div>
+
+  <!-- FALL 2025 -->
+  <h3 class="group-title">Fall 2025</h3>
+
+  <!-- SANYA -->
+  <div class="alt-row" style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
+    <div class="alt-text">
+      <h3 style="font-size:2em;color:#222;font-weight:600;">
+        <a href="https://www.linkedin.com/in/sanya-master-ab28a4256/" style="color:#222;text-decoration:none;">Sanya Master</a>
+      </h3>
+      <h4 style="font-size:1.7em;color:#9b25ff;margin:10px 0 20px;text-align: right;">Coordinator</h4>
+      <p style="font-size:1.6em;color:#555;line-height:1.75;text-align: right;">
+        Managed communication, coordinated project timelines, and supported operations.
+      </p>
+      <p style="font-size:1.6em;text-align: right;"><strong>Supervisor:</strong> Sara Hashemi-Nasab</p>
+    </div>
+  </div>
+
+  <!-- RIDDHI -->
+  <div class="alt-row" style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
+    <div class="alt-text">
+      <h3 style="font-size:2em;color:#222;font-weight:600;">
+        <a href="https://www.linkedin.com/in/riddhiriddhi/" style="color:#222;text-decoration:none;">Riddhi</a>
+      </h3>
+      <h4 style="font-size:1.7em;color:#9b25ff;margin:10px 0 20px;">Frontend Developer</h4>
+      <p style="font-size:1.6em;color:#555;line-height:1.75;">
+        Built responsive, beautiful web pages aligned with Wild’s design and UX standards.
+      </p>
+      <p style="font-size:1.6em;"><strong>Supervisor:</strong> Sara Hashemi-Nasab</p>
+    </div>
+
+    <div class="alt-image" style="text-align:center;">
+      <img src="/Website_trial/images/profile.jpg" style="width:400px;height:400px;border-radius:50%;object-fit:cover;border:4px solid #e8d5ff;" />
+    </div>
+  </div>
+
+  <!-- PARTH -->
+  <div class="alt-row" style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;margin-bottom:60px;">
+    <div class="alt-image" style="text-align:center;">
+      <img src="/Website_trial/images/parth.jpeg" style="width:400px;height:400px;border-radius:50%;object-fit:cover;border:4px solid #e8d5ff;" />
+    </div>
+
+    <div class="alt-text" style="flex:2;">
+      <h3 style="font-size:2em;color:#222;font-weight:600;">
+        <a href="https://www.linkedin.com/in/parth-yadav-227302234/" style="color:#222;text-decoration:none;">Parth Yadav</a>
+      </h3>
+      <h4 style="font-size:1.7em;color:#9b25ff;margin:10px 0 20px;">Backend Developer</h4>
+      <p style="font-size:1.6em;color:#555;line-height:1.75;">
+        Maintained backend systems, optimized logic, and improved technical performance.
+      </p>
+      <p style="font-size:1.6em;"><strong>Supervisor:</strong> Sara Hashemi-Nasab</p>
+    </div>
+  </div>
+
+  <!-- SUMMER 2026 -->
+  <h3 class="group-title">Summer 2026</h3>
+  <div class="team-grid"></div>
+
+</section>
+
+<footer>
+  © 2025 Wild. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #fbf8ff 0%, #ffffff 100%);
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6%;
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  color: #6a0dad;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #6a0dad;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+  padding: 4rem 6%;
+  font-weight: 10rem;
+}
+
+.about-section h3 {
+  color: #6a0dad;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-section h2 {
+  color: #6a0dad;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: auto;
+}
+
+.about-text {
+  flex: 1;
+  text-align: justify;
+  padding-top: 50px;
+}
+
+.about-text h4 {
+  color: #6a0dad;
+  margin-bottom: 1.9rem;
+  font-size: 1.4rem;
+}
+
+.about-text p {
+  margin-bottom: 1.9rem;
+  line-height: 1.8;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Link Styles for Businesses */
+.wild-skin-care {
+  color: red;
+  text-decoration: underline;
+}
+
+.wild-ei-leadership {
+  color: blue;
+  text-decoration: underline;
+}
+
+.about-image {
+  flex: 1;
+  text-align: justify;
+  padding-left: 140px;
+}
+
+.about-image img {
+  width: 600px;
+  height: 700px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #faf7ff;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 80%;
+  }
+}

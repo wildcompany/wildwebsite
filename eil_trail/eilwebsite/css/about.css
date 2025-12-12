@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  font-size: 18px; 
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 34px;
+  font-weight: 600;
+  color: #0b3a75;
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: 1.4rem; /* Larger font size */
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #004aad;
+}
+
+.nav-btn {
+  padding: 0.6rem 1.2rem;
+  background: #004aad;
+  color: white !important;
+  border-radius: 8px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background: #f3f7ff;
+  color: #004aad;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: #004aad;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(120deg, #0072ff, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.about-hero p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: white;
+  clip-path: ellipse(70% 60% at 50% 100%);
+}
+
+/* Mission Section */
+.mission, .vision {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 10%;
+  flex-wrap: wrap;
+}
+
+.mission .text, .vision .text {
+  flex: 1 1 400px;
+}
+
+.mission .image, .vision .image {
+  flex: 1 1 400px;
+}
+
+.mission img, .vision img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.about-hero p {
+  font-size: 1.3rem;
+}
+
+.mission h2, .vision h2, .values h2 {
+  font-size: 2.2rem;
+}
+
+.mission p, .vision p, .values p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+}
+
+.value-card p {
+  font-size: 1rem;
+}
+
+.mission h2, .vision h2 {
+  color: #004aad;
+  margin-bottom: 1rem;
+}
+
+.mission p, .vision p {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Values Section */
+.values {
+  text-align: center;
+  padding: 4rem 10%;
+  background: #f9f9fb;
+}
+
+.values h2 {
+  color: #004aad;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+}
+
+.value-card i {
+  font-size: 2rem;
+  color: #0072ff;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+/* Vision Video Styling */
+.vision .video {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision .video video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+
+
+/* Footer */
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mission, .vision {
+    flex-direction: column;
+    text-align: center;
+  }
+}

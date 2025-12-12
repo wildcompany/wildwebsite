@@ -1,0 +1,66 @@
+body {
+  background: #fdecec;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.cart-container {
+  width: 70%;
+  margin: 40px auto;
+}
+
+.cart-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cart-image img {
+  width: auto;
+  border-radius: 10px;
+}
+
+.cart-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.cart-details h3 {
+  color: #b22222;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.delete-btn {
+  color: #b22222;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  color: #8b0000;
+}
+
+/* =====================Checkout button css ===================== */
+.checkout-btn {
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  background: #b22222;
+  color: white;
+  padding: 14px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  width: fit-content;
+}
+.checkout-btn:hover {
+  background: #8b0000;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Appointment | EIL</title>
+  <link rel="stylesheet" href="/eil_trail/eilwebsite/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    .container {
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 32px;
+      font-weight: 600;
+      color: #003366;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 14px;
+      background: #fdfdfd;
+    }
+
+    textarea {
+      grid-column: span 2;
+      min-height: 120px;
+      resize: none;
+    }
+
+    .submit-btn {
+      grid-column: span 2;
+      text-align: center;
+    }
+
+    button {
+      padding: 14px 40px;
+      background: #003366;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0055aa;
+    }
+
+    .info-box {
+      background: #eef5ff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-circle" style="background-image: url(/eil_trail/eilwebsite/images/logo.png);"></div>
+      <span>Emotional Intelligence</span>
+    </div>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <div class="dropdown">
+        <a href="events.html">Events <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Upcoming Events</a></li>
+          <li><a href="#">Workshops</a></li>
+          <li><a href="#">Seminars</a></li>
+          <li><a href="#">Leadership Talks</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="multimedia.html">Educational Multimedia <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#videos-section">Videos</a></li>
+      <li><a href="#podcasts-section">Podcasts</a></li>
+      <li><a href="#publications-section">Publications</a></li>
+        </ul>
+      </div>
+
+      <a href="subscription.html">Subscription</a>
+       <a href="cart.html">Cart</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Book an Appointment</h1>
+    <p class="subtitle">Schedule a meeting with our team — we’re here to assist you.</p>
+
+    <form>
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div>
+        <label for="service">Select Service</label>
+        <select id="service" required>
+          <option value="">Choose an option</option>
+          <option>Consultation</option>
+          <option>Career Guidance</option>
+          <option>Training Request</option>
+          <option>General Inquiry</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" required>
+      </div>
+
+      <div>
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" required>
+      </div>
+
+      <textarea id="message" placeholder="Additional notes (optional)"></textarea>
+
+      <div class="submit-btn">
+        <button type="submit">Submit Appointment Request</button>
+      </div>
+    </form>
+
+    <div class="info-box">
+      <h3>Need Help?</h3>
+      <p>If you have any questions before booking your appointment, feel free to contact our support team at <strong>support@eil.com</strong>.</p>
+    </div>
+  </div>
+</body>
+</html>

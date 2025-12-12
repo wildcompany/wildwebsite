@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Consultation Committee Application | Wild</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  body {
+    background: #faf7ff;
+    font-family: 'Poppins', sans-serif;
+    padding: 60px 10%;
+  }
+
+  h1 {
+    text-align: center;
+    color: #9b25ff;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+  }
+
+  p.subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 1.3em;
+    margin-bottom: 50px;
+  }
+
+  form {
+    background: #fff;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    margin: auto;
+  }
+
+  label {
+    display: block;
+    font-size: 1.1em;
+    margin: 18px 0 8px;
+    color: #333;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ded1ff;
+    border-radius: 12px;
+    font-size: 1em;
+    outline: none;
+  }
+
+  textarea {
+    height: 140px;
+    resize: vertical;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #9b25ff;
+  }
+
+  button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 16px;
+    background: #9b25ff;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #7110d1;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Consultation Committee Application</h1>
+<p class="subtitle">Complete the form below to apply to join Wild’s advisory team.</p>
+
+<form action="#" method="POST" enctype="multipart/form-data">
+
+  <label>First Name</label>
+  <input type="text" name="first_name" required />
+
+  <label>Last Name</label>
+  <input type="text" name="last_name" required />
+
+  <label>Email</label>
+  <input type="email" name="email" required />
+
+  <label>Phone Number</label>
+  <input type="text" name="phone" />
+
+  <label>LinkedIn URL</label>
+  <input type="url" name="linkedin" />
+
+  <label>Upload Your CV</label>
+  <input type="file" name="cv" accept=".pdf,.doc,.docx" required />
+
+  <label>What motivates you to support the success of this company?</label>
+  <textarea name="q1" required></textarea>
+
+  <label>How would you like to contribute?</label>
+  <textarea name="q2" required></textarea>
+
+  <label>What background or experience makes you a strong candidate?</label>
+  <textarea name="q3" required></textarea>
+
+  <button type="submit">Submit Application</button>
+</form>
+<div style="text-align:center; margin-bottom: 10px;margin-top: 50px;">
+  <a href="teams.html" 
+     style="
+       background:#e8d5ff;
+       padding:14px 28px;
+       border-radius:40px;
+       text-decoration:none;
+       color:#7110d1;
+       font-size:1.1em;
+       font-weight:500;
+       border:2px solid #d4b3ff;
+       transition:0.3s;
+     "
+     onmouseover="this.style.background='#d4b3ff';this.style.color='#fff';"
+     onmouseout="this.style.background='#e8d5ff';this.style.color='#7110d1';"
+  >
+    ← Back to Our Team
+  </a>
+</div>
+
+</body>
+</html>

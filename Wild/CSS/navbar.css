@@ -1,0 +1,121 @@
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0.8rem 4rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #b71c1c;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #b71c1c;
+}
+
+/* =============== PROFILE DROPDOWN MENU =============== */
+.profile-container {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Profile icon style */
+.nav-icons .profile i {
+    font-size: 1.3rem;
+    color: #1f2d3d;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.profile-icon {
+  font-size: 1.3rem;
+  color: #1f2d3d;
+}
+
+/* Dropdown Box */
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  width: 150px;
+  padding: 10px 0;
+  display: none;
+  z-index: 2000;
+}
+
+/* Dropdown Links */
+.profile-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.profile-dropdown a:hover {
+  background-color: #ffe5e5; /* soft pink like your hero section */
+  color: #b71c1c; /* your red theme */
+}
+
+/* Show dropdown when active */
+.profile-container.active .profile-dropdown {
+  display: block;
+}
+
+
+/* RIGHT ICONS */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  font-size: 20px;
+}
+
+.icons a {
+  color: #333;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #ff6b6b;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
