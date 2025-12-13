@@ -70,7 +70,7 @@
   <!-- Row 1 -->
   <div class="farm-row">
     <div class="farm-image">
-      <img src="./img/botanical(1).jpg">
+      <img src="./img/Botanic (1).png">
     </div>
     <div class="farm-text">
       <h3>50+ Botanical Species</h3>
@@ -81,7 +81,7 @@
   <!-- Row 2 -->
   <div class="farm-row reverse">
     <div class="farm-image">
-      <img src="./img/botanical(2).jpg">
+      <img src="./img/Botanic (2).png">
     </div>
     <div class="farm-text">
       <h3>Zero Waste Practices</h3>
@@ -92,7 +92,7 @@
   <!-- Row 3 -->
   <div class="farm-row">
     <div class="farm-image placeholder">
-      <i class="fa-regular fa-image"></i>
+      <img src="./img/oil.png">
     </div>
     <div class="farm-text">
       <h3>Educational Programs</h3>

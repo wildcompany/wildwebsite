@@ -323,7 +323,7 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'all';
       <!-- Example future product 1 -->
       <div class="future-card">
         <div class="future-img">
-          <img src="./img/future-balm.png" alt="Herbal Recovery Balm (Future)">
+          <img src="./img/cream.png" alt="Herbal Recovery Balm (Future)">
           <span class="future-badge">Coming Soon</span>
         </div>
         <div class="future-info">
@@ -349,7 +349,7 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'all';
       <!-- Example future product 2 -->
       <div class="future-card">
         <div class="future-img">
-          <img src="./img/future-serum.png" alt="Moonlight Brightening Serum (Future)">
+          <img src="./img/serum.png" alt="Moonlight Brightening Serum (Future)">
           <span class="future-badge">Made-to-Order</span>
         </div>
         <div class="future-info">
@@ -373,7 +373,7 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'all';
       <!-- Example future product 3 -->
       <div class="future-card">
         <div class="future-img">
-          <img src="./img/future-giftset.png" alt="Wild Rituals Gift Set (Future)">
+          <img src="./img/oil.png" alt="Wild Rituals Gift Set (Future)">
           <span class="future-badge">Limited Run</span>
         </div>
         <div class="future-info">

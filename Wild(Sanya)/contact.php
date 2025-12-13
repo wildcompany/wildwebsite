@@ -29,7 +29,7 @@
     <h2>Get in Touch</h2>
     <p>Feel free to reach out to us using the contact form, or through the details below.</p>
 
-    <div class="info-box">
+    <!-- <div class="info-box">
       <i class="fa-solid fa-location-dot"></i>
       <div>
         <h4>Our Location</h4>
@@ -43,7 +43,7 @@
         <h4>Phone</h4>
         <p>+1 (437) 000-0000</p>
       </div>
-    </div>
+    </div> -->
 
     <div class="info-box">
       <i class="fa-solid fa-envelope"></i>
