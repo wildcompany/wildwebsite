@@ -1,0 +1,187 @@
+/* ===== Global ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fdfdff;
+  color: #222;
+  margin: 0;
+}
+
+/* ===== Hero Section ===== */
+.hobbies-hero {
+  background: linear-gradient(to right, #7b2cbf, #9d4edd);
+  color: #fff;
+  text-align: center;
+  padding: 7rem 2rem 6rem;
+  position: relative;
+}
+
+.hobbies-hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hobbies-hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* ===== Hobbies Section ===== */
+.hobbies-section {
+  padding: 5rem 2rem;
+  background: #faf8ff;
+  text-align: center;
+}
+
+.hobbies-section h2 {
+  color: #5a189a;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.hobbies-section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #9d4edd;
+  border-radius: 5px;
+  display: block;
+  margin: 0.8rem auto 0;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hobby-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 1.8rem;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  color: #9d4edd;
+  margin-bottom: 1rem;
+}
+
+.hobby-card h3 {
+  font-size: 1.3rem;
+  color: #5a189a;
+  margin-bottom: 0.6rem;
+}
+
+.hobby-card p {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* ===== Gallery Section ===== */
+.gallery-section {
+  padding: 5rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  color: #5a189a;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-section p {
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #d692f8;
+  color: #eee;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto 1.5rem;
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  color: #2d0748;
+  margin-bottom: 1rem;
+}
+
+.footer-col p {
+  color: #2d0748;
+  font-size: 0.9rem;
+}
+
+.social-icons a {
+  color: #2d0748;
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #2d0748;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #0c0c0c;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hobbies-hero h1 {
+    font-size: 2.2rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

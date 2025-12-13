@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #f9f5ff, #ffffff);
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6%;
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  color: #6a0dad;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6a0dad;
+}
+
+/* Buttons */
+.nav-buttons a {
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.signin {
+  color: #6a0dad;
+  border: 1px solid #6a0dad;
+}
+
+.signup {
+  background-color: #8a2be2;
+  color: #fff;
+  border: none;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #6a0dad;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 6%;
+  min-height: 80vh;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h4 {
+  color: #6a0dad;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.hero-content h2 {
+  color: #6a0dad;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1.8rem;
+}
+
+.btn {
+  background: #8a2be2;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(138, 43, 226, 0.3);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #6a0dad;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+
+/* Tablets and below */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 80%;
+  }
+
+  .desktop-buttons {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .mobile-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 500px) {
+  .logo {
+    font-size: 0.95rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}.explore {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.work-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.9);
+}
+
+.card-image.skincare {
+    background-image: 
+        linear-gradient(to top, rgba(33, 56, 130, 0.75), rgba(33, 56, 130, 0.25)),
+        url('/images/skincare.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.95);
+}
+.card:nth-child(1) .card-content h3 {
+    color: #e85969;
+}
+
+.card:nth-child(1) .btn {
+    border-color: #e85969;
+    color: #e85969;
+}
+
+.card:nth-child(1) .btn:hover {
+    background: #e85969;
+    color: #fff;
+}
+
+.card-image.eil {
+    background-image: 
+        linear-gradient(to top, rgba(33, 56, 130, 0.75), rgba(33, 56, 130, 0.25)),
+        url('/images/emotionalintelligence.webp');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.95);
+}
+.card:nth-child(2) .card-content h3 {
+    color: #3992da;
+}
+
+.card:nth-child(2) .btn {
+    border-color: #3992da;
+    color: #3992da;
+}
+
+.card:nth-child(2) .btn:hover {
+    background: #3992da;
+    color: #fff;
+}
+
+.card-content {
+    padding: 1.2rem;
+    text-align: left;
+}
+
+.card-content h3 {
+    color: #e85969;
+    font-size: 1.1rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    margin: 10px 0 20px;
+    line-height: 1.4;
+    color: #555;
+}
+
+.btn {
+    background: transparent;
+    border: 1.5px solid #7a4de9;
+    color: #7a4de9;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #7a4de9;
+    color: #fff;
+}
+
+/* Footer Section */
+footer {
+    background: #faf6ff;
+    padding: 2rem 4rem;
+    color: #444;
+    margin-top: 4rem;
+}
+
+.footer-top {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-top a {
+    color: #6a4ad4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 2rem;
+}
+
+.footer-main h4 {
+    margin-bottom: 1rem;
+    color: #3b2a9f;
+}
+
+.footer-main ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-main ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-main ul li a {
+    text-decoration: none;
+    color: #444;
+}
+
+.footer-main ul li a:hover {
+    color: #7a4de9;
+}
+
+.newsletter {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+    color: #555;
+}

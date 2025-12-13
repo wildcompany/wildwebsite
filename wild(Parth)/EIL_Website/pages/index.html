@@ -1,0 +1,94 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emotional Intelligence in Leadership (EIL) | WILD</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6b08a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-circle" style="background-image: url('../images/logo.png')"></div>
+      <span>Emotional Intelligence</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+
+      <div class="dropdown">
+        <a href="events.html">Events <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#upcoming-events">Upcoming Events</a></li>
+          <li><a href="#">Workshops</a></li>
+          <li><a href="#">Seminars</a></li>
+          <li><a href="#">Leadership Talks</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="multimedia.php">Educational Multimedia<i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+         <li><a href="#videos-section">Videos</a></li>
+      <li><a href="#podcasts-section">Podcasts</a></li>
+      <li><a href="#publications-section">Publications</a></li>
+        </ul>
+      </div>
+
+      <a href="subscription.html">Subscription</a>
+       <a href="cart.php">Cart</a>
+    
+ 
+    </nav>
+    <a href="appointment.html" class="appointment-btn">Book Appointment</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Emotional Intelligence in Leadership (EIL)</h1>
+      <p>Cultivating empathy, awareness, and purpose-driven leadership.</p>
+      <div class="hero-buttons">
+        <a href="events.html" class="btn primary"><i class="fa-regular fa-calendar-check"></i> View Events</a>
+      </div>
+    </div>
+    <div class="hero-wave"></div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="info-section">
+    <h2>Empowering Leaders through Emotional Intelligence</h2>
+    <p>
+      At WILD, we believe leadership begins with emotional awareness. Our programs
+      guide individuals and organizations in building empathetic, resilient, and
+      purpose-centered leadership models for the modern world.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 WILD. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+

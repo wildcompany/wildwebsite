@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription | WILD – Emotional Intelligence</title>
+  <link rel="stylesheet" href="../css/subscription.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">
+    <div class="logo-circle" style="background-image:url(../images/logo.png)"></div>
+    <span>Emotional Intelligence</span>
+  </div>
+
+   <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      
+
+      <div class="dropdown">
+        <a href="events.html">Events</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Upcoming Events</a></li>
+          <li><a href="#">Workshops</a></li>
+          <li><a href="#">Seminars</a></li>
+          <li><a href="#">Leadership Talks</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="multimedia.php">Educational Multimedia</a>
+        <ul class="dropdown-menu">
+          <li><a href="#videos-section">Videos</a></li>
+      <li><a href="#podcasts-section">Podcasts</a></li>
+      <li><a href="#publications-section">Publications</a></li>
+        </ul>
+      </div>
+
+      <a href="subscription.html">Subscription</a>
+      <a href="cart.php">Cart</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Subscription Plans</h1>
+    <p>Choose the perfect plan to grow your emotional intelligence and leadership skills.</p>
+  </div>
+</section>
+
+
+<!-- Simple Plans -->
+<section class="section">
+  <h2>Simple & Clean Plans</h2>
+
+  <div class="simple-plans">
+
+    <div class="plan" data-plan="Basic" data-month="0" data-year="0">
+      <h3>Basic</h3>
+      <p class="price">Free</p>
+      <p>Access to selected articles and resources.</p>
+      <button class="btn plan-btn">Choose Plan</button>
+    </div>
+
+    <div class="plan" data-plan="Standard" data-month="9.99" data-year="99.99">
+      <h3>Standard</h3>
+      <p class="price">$9.99 / mo</p>
+      <p>Videos, articles, and limited events.</p>
+      <button class="btn plan-btn">Choose Plan</button>
+    </div>
+
+    <div class="plan" data-plan="Premium" data-month="19.99" data-year="199.99">
+      <h3>Premium</h3>
+      <p class="price">$19.99 / mo</p>
+      <p>Full access to all content and events.</p>
+      <button class="btn plan-btn">Choose Plan</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Emotional Intelligence Plans -->
+<section class="section minimal-ei">
+  <h2>EI Leadership Plans</h2>
+
+  <div class="ei-cards">
+
+    <div class="ei-card" data-plan="Mindful Leader" data-month="12" data-year="120">
+      <h3>Mindful Leader</h3>
+      <p class="price">$12 / mo</p>
+      <p>Grow personal awareness with curated EI tools.</p>
+      <button class="btn-ei plan-btn">Subscribe</button>
+    </div>
+
+    <div class="ei-card" data-plan="Empathy Builder" data-month="22" data-year="220">
+      <h3>Empathy Builder</h3>
+      <p class="price">$22 / mo</p>
+      <p>Improve communication & empathy through guided content.</p>
+      <button class="btn-ei plan-btn">Subscribe</button>
+    </div>
+
+    <div class="ei-card" data-plan="Leadership Mastery" data-month="45" data-year="450">
+      <h3>Leadership Mastery</h3>
+      <p class="price">$45 / mo</p>
+      <p>Transform your leadership with full EI coaching access.</p>
+      <button class="btn-ei plan-btn">Subscribe</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Subscription Modal -->
+<div id="planModal" class="modal-overlay">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h2 id="modal-plan-title">Selected Plan</h2>
+    <p class="modal-subtitle">Unlock premium content & leadership tools</p>
+
+    <!-- Monthly / Yearly Switch -->
+    <div class="toggle-container">
+      <span>Monthly</span>
+      <label class="switch">
+        <input type="checkbox" id="billingToggle">
+        <span class="slider"></span>
+      </label>
+      <span>Yearly</span>
+    </div>
+
+    <div class="modal-plan-info">
+      <p class="modal-price" id="modalPrice">$0 / month</p>
+      <ul>
+        <li>✔ Access to videos</li>
+        <li>✔ Leadership articles</li>
+        <li>✔ EI growth tools</li>
+        <li>✔ Priority support</li>
+      </ul>
+    </div>
+
+    <a id="paymentButton" href="checkout.html" class="modal-payment-btn">Continue to Payment</a>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 WILD – Emotional Intelligence in Leadership. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+let selectedPlan = "";
+let selectedMonth = 0;
+let selectedYear = 0;
+
+document.querySelectorAll(".plan-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    let parent = this.closest("[data-plan]");
+    selectedPlan = parent.dataset.plan;
+    selectedMonth = parseFloat(parent.dataset.month);
+    selectedYear = parseFloat(parent.dataset.year);
+
+    document.getElementById("modal-plan-title").innerText = selectedPlan;
+    document.getElementById("modalPrice").innerText = `$${selectedMonth} / month`;
+
+    openModal();
+  });
+});
+
+document.getElementById("billingToggle").addEventListener("change", function () {
+  if (this.checked) {
+    document.getElementById("modalPrice").innerText = `$${selectedYear} / year`;
+  } else {
+    document.getElementById("modalPrice").innerText = `$${selectedMonth} / month`;
+  }
+});
+
+function openModal() {
+  document.getElementById("planModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("planModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

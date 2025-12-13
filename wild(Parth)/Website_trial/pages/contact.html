@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Sara Hashemi Nasab</title>
+  <link rel="stylesheet" href="../css/contact.css" />
+   <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ <div id="navbar-container"></div>
+<section class="contact-section">
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h2>Let's Connect</h2>
+            <p>If you have any questions, collaborations, or opportunities, feel free to reach out. I’d love to hear from you.</p>
+
+            <div class="details">
+                <p><strong>Email:</strong> yourname@example.com</p>
+                <p><strong>Location:</strong> Your City, Country</p>
+            </div>
+        </div>
+
+        <form class="contact-form" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="thankyou.html">
+
+            <input type="text" name="name" placeholder="Your Full Name" required>
+            <input type="email" name="email" placeholder="Your Email Address" required>
+            <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+</body>
+</html>
